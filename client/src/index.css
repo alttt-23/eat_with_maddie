@@ -1,6 +1,76 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@font-face {
+  font-family: "SF Pro Text";
+  src:
+    url("/fonts/sf-pro/SFProText-Regular.woff2") format("woff2"),
+    url("/fonts/sf-pro/SFProText-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src:
+    url("/fonts/sf-pro/SFProText-Medium.woff2") format("woff2"),
+    url("/fonts/sf-pro/SFProText-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src:
+    url("/fonts/sf-pro/SFProText-Semibold.woff2") format("woff2"),
+    url("/fonts/sf-pro/SFProText-Semibold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src:
+    url("/fonts/sf-pro/SFProText-Bold.woff2") format("woff2"),
+    url("/fonts/sf-pro/SFProText-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Canela";
+  src:
+    url("/fonts/canela/Canela-Regular.woff2") format("woff2"),
+    url("/fonts/canela/Canela-Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Canela";
+  src:
+    url("/fonts/canela/Canela-Medium.woff2") format("woff2"),
+    url("/fonts/canela/Canela-Medium.otf") format("opentype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Canela";
+  src:
+    url("/fonts/canela/Canela-Bold.woff2") format("woff2"),
+    url("/fonts/canela/Canela-Bold.otf") format("opentype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -43,75 +113,105 @@
 }
 
 :root {
-  /* Warm Rustic Color Palette */
-  --primary: #8B3A3A;
-  --primary-foreground: #F5F1E8;
-  --sidebar-primary: #8B3A3A;
-  --sidebar-primary-foreground: #F5F1E8;
-  --chart-1: #D2691E;
-  --chart-2: #8B3A3A;
-  --chart-3: #9CAF88;
-  --chart-4: #5C4033;
-  --chart-5: #C4A57B;
+  --font-body: "SF Pro Text", "Segoe UI", sans-serif;
+  --font-display: "Canela", "Iowan Old Style", "Times New Roman", serif;
+
+  --surface-0: #fcf6ee;
+  --surface-1: #f7efdf;
+  --surface-line: #e7d9c4;
+  --ink-muted: #6f5b49;
+  --brand-900: #5c1919;
+  --brand-800: #6f2424;
+  --brand-700: #812b2b;
+  --brand-500: #b4533f;
+  --brand-300: #dca98b;
+  --brand-200: #edc9a8;
+  --accent-100: #fff2cf;
+  --accent-900: #a25410;
+  --accent-700: #c46a1f;
+
+  --primary: #812b2b;
+  --primary-foreground: #fcf6ee;
+  --sidebar-primary: #812b2b;
+  --sidebar-primary-foreground: #fcf6ee;
+  --chart-1: #c46a1f;
+  --chart-2: #812b2b;
+  --chart-3: #8e9f6d;
+  --chart-4: #6e4a2b;
+  --chart-5: #d8b588;
   --radius: 0.65rem;
-  --background: #F5F1E8;
-  --foreground: #3A3A3A;
-  --card: #FFFFFF;
-  --card-foreground: #3A3A3A;
-  --popover: #FFFFFF;
-  --popover-foreground: #3A3A3A;
-  --secondary: #9CAF88;
-  --secondary-foreground: #2D3D2D;
-  --muted: #E8E4D8;
-  --muted-foreground: #6B6B6B;
-  --accent: #D2691E;
-  --accent-foreground: #FFFFFF;
-  --destructive: #DC2626;
-  --destructive-foreground: #FFFFFF;
-  --border: #D9D4C8;
-  --input: #FFFFFF;
-  --ring: #8B3A3A;
-  --sidebar: #F5F1E8;
-  --sidebar-foreground: #3A3A3A;
-  --sidebar-accent: #D2691E;
-  --sidebar-accent-foreground: #FFFFFF;
-  --sidebar-border: #D9D4C8;
-  --sidebar-ring: #8B3A3A;
+  --background: #fcf6ee;
+  --foreground: #352922;
+  --card: #ffffff;
+  --card-foreground: #352922;
+  --popover: #ffffff;
+  --popover-foreground: #352922;
+  --secondary: #f2e5d3;
+  --secondary-foreground: #4f3a2d;
+  --muted: #efe1cd;
+  --muted-foreground: #816c57;
+  --accent: #c46a1f;
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #e7d9c4;
+  --input: #ffffff;
+  --ring: #812b2b;
+  --sidebar: #fcf6ee;
+  --sidebar-foreground: #352922;
+  --sidebar-accent: #c46a1f;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #e7d9c4;
+  --sidebar-ring: #812b2b;
 }
 
 .dark {
-  --primary: #8B3A3A;
-  --primary-foreground: #F5F1E8;
-  --sidebar-primary: #8B3A3A;
-  --sidebar-primary-foreground: #F5F1E8;
-  --background: #1A1A1A;
-  --foreground: #F5F1E8;
-  --card: #2A2A2A;
-  --card-foreground: #F5F1E8;
-  --popover: #2A2A2A;
-  --popover-foreground: #F5F1E8;
-  --secondary: #9CAF88;
-  --secondary-foreground: #F5F1E8;
-  --muted: #3A3A3A;
-  --muted-foreground: #B8B8B8;
-  --accent: #D2691E;
-  --accent-foreground: #FFFFFF;
-  --destructive: #DC2626;
-  --destructive-foreground: #FFFFFF;
-  --border: #3A3A3A;
-  --input: #2A2A2A;
-  --ring: #8B3A3A;
-  --chart-1: #D2691E;
-  --chart-2: #8B3A3A;
-  --chart-3: #9CAF88;
-  --chart-4: #C4A57B;
-  --chart-5: #E8B4A0;
-  --sidebar: #1A1A1A;
-  --sidebar-foreground: #F5F1E8;
-  --sidebar-accent: #D2691E;
-  --sidebar-accent-foreground: #FFFFFF;
-  --sidebar-border: #3A3A3A;
-  --sidebar-ring: #8B3A3A;
+  --surface-0: #1f1a16;
+  --surface-1: #2a231e;
+  --surface-line: #44382f;
+  --ink-muted: #b8a692;
+  --brand-900: #ffd3b6;
+  --brand-800: #efbb98;
+  --brand-700: #e39e6e;
+  --brand-500: #d08a5a;
+  --brand-300: #8c6f57;
+  --brand-200: #7e634d;
+  --accent-100: #4b381d;
+  --accent-900: #e08f35;
+  --accent-700: #d98328;
+
+  --primary: #e39e6e;
+  --primary-foreground: #1f1a16;
+  --sidebar-primary: #e39e6e;
+  --sidebar-primary-foreground: #1f1a16;
+  --background: #1f1a16;
+  --foreground: #f2e6db;
+  --card: #2a231e;
+  --card-foreground: #f2e6db;
+  --popover: #2a231e;
+  --popover-foreground: #f2e6db;
+  --secondary: #3a3028;
+  --secondary-foreground: #f2e6db;
+  --muted: #3a3028;
+  --muted-foreground: #c4b3a0;
+  --accent: #d98328;
+  --accent-foreground: #fefaf7;
+  --destructive: #ef4444;
+  --destructive-foreground: #fefaf7;
+  --border: #44382f;
+  --input: #2a231e;
+  --ring: #e39e6e;
+  --chart-1: #d98328;
+  --chart-2: #e39e6e;
+  --chart-3: #9fb37f;
+  --chart-4: #d8b588;
+  --chart-5: #e0a77d;
+  --sidebar: #1f1a16;
+  --sidebar-foreground: #f2e6db;
+  --sidebar-accent: #d98328;
+  --sidebar-accent-foreground: #fefaf7;
+  --sidebar-border: #44382f;
+  --sidebar-ring: #e39e6e;
 }
 
 @layer base {
@@ -120,7 +220,7 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: var(--font-body);
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -135,8 +235,8 @@
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-weight: 700;
+    font-family: var(--font-display);
+    font-weight: 500;
     letter-spacing: -0.02em;
   }
   
@@ -178,6 +278,29 @@
   .flex {
     min-height: 0;
     min-width: 0;
+  }
+
+  .hero-glow {
+    position: absolute;
+    width: 28rem;
+    height: 28rem;
+    border-radius: 9999px;
+    pointer-events: none;
+    filter: blur(58px);
+    opacity: 0.45;
+    z-index: 0;
+  }
+
+  .hero-glow-left {
+    left: -12rem;
+    top: -10rem;
+    background: radial-gradient(circle, rgba(189, 92, 62, 0.58), rgba(189, 92, 62, 0));
+  }
+
+  .hero-glow-right {
+    right: -10rem;
+    bottom: -12rem;
+    background: radial-gradient(circle, rgba(213, 146, 54, 0.48), rgba(213, 146, 54, 0));
   }
 
   @media (min-width: 640px) {
