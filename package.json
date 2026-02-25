@@ -5,7 +5,9 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite --host",
+    "build:client": "vite build",
     "build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
+    "build:pages": "vite build --base=/eat_with_maddie/ && node scripts/prepare-pages.mjs",
     "start": "NODE_ENV=production node dist/index.js",
     "preview": "vite preview --host",
     "check": "tsc --noEmit",
