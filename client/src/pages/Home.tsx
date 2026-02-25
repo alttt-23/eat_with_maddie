@@ -270,7 +270,7 @@ const copy = {
     heroSubtitle: "Burgundy kitchen energy, menu variety, and fast order confirmation on WhatsApp.",
     orderNow: "Order on WhatsApp",
     callNow: "Call now",
-    menuTitle: "Menu",
+    menuTitle: "Full Menu",
     menuSubtitle: "",
     allCategories: "All Categories",
     addToOrder: "Add",
